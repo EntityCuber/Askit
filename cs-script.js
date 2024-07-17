@@ -163,8 +163,8 @@ function showKey(code) {
     Btn_Copy_Link.style.display = "block"
 
     Number_Question.innerHTML = "share this url to your friends"
-    survey_url = "https://askit.netlify.com/survey#" + code
-    results_url = "https://askit.netlify.com/results#" + code
+    survey_url = "https://askit.netlify.app/survey#" + code
+    results_url = "https://askit.netlify.app/results#" + code
     Label_Heading.innerHTML = "<a href=" + survey_url + " target='_blank' >" + survey_url + "</a>"
 
     firebase.database().ref().child("Users").child(userid).child("surveys").child(code).set([Date(), Input_Survey_Topic.value])
