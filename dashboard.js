@@ -25,7 +25,7 @@ let actionLogout = false;
 
 function CopyToClipboard(value) {
     const el = document.createElement('textarea');
-    el.value = "https://askit.netlify.com/survey#" + value;
+    el.value = "https://askit.netlify.app/survey#" + value;
     el.setAttribute('readonly', '');
     el.style.position = 'absolute';
     el.style.left = '-9999px';
@@ -88,7 +88,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                     });
                     list.innerHTML += `<div class="surveys-listing">
                     <div class="survey-topic">
-                        <a href="https://askit.netlify.com/results#` + key + `">
+                        <a href="https://askit.netlify.app/results#` + key + `">
                             <h2 class="survey-topic-text">` + data[key][1] + `</h2>
                         </a>
                     </div>
@@ -157,7 +157,7 @@ function actionCopyToClipboard(value) {
 
     popupActionCopy.innerHTML = `      
     
-    <h2 class="popup-action-copy-link"><a href="https://askit.netlify.com/survey.html#` + value + `" target="_blank"> https://askit.netlify.com/survey.html#` + value + `</a></h2>
+    <h2 class="popup-action-copy-link"><a href="https://askit.netlify.app/survey.html#` + value + `" target="_blank"> https://askit.netlify.app/survey.html#` + value + `</a></h2>
   
     <button onclick="hideActionCopyToClipboard()">Close</button>
   
